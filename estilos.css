@@ -1,0 +1,51 @@
+body{
+    margin: 0 auto;
+    width: 960px;
+    background-color: #F0F0E0;
+}
+#cabecalho{
+    font-size: 20pt;
+    background-color: #508050;
+    padding: 10px 20px 10px 20px;
+    border-radius: 0px 0px 20px 20px;
+    color:#FFF;
+}
+#navbar{
+    float:left;
+    margin-top:0px;
+    width: 453px;
+    }
+    #navbar a:hover {
+    color:#000;
+    }
+    #navbar ul {
+    list-style: none;
+    background: linear-gradient(to bottom, #DDD, #666);
+    padding: 0px;
+    margin: 0px;
+    }
+    #navbar li {
+    height: 57px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width:150px;
+    border-right: 1px solid #062;
+    }
+    #navbar ul li a{
+    text-decoration: none;
+    font-size:20px;
+    color: #FFF;
+    }
+#main{
+    margin-top: 70px;
+}
+.botao{
+    width:200px;
+    height:40px;
+    border-radius:20px;
+    background-color:#508050;
+    border:0px;
+    cursor:pointer;
+    }
+    

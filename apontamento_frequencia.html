@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+<head>
+    <title>Apontamento de Frequência</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+</head>
+    <body>
+        <header id="cabecalho">
+            <p>Apontamento de Frequência</p>
+        </header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="controle_eventos_home.html" target="_self">Home</a></li>
+                <li><a href="cadastro_pessoa.html" target="_self">Cadastro de Pessoas</a></li>
+                <li><a href="cadastro_evento.html" target="self">Cadastro de Eventos</a></li>
+                <li><a href="cadastro_atividade.html" target="self">Cadastro de Atividades</a></li>
+                <li><a href="apontamento_frequencia.html" target="self">Apontamento de Frequência</a></li>
+            </ul>
+        </nav>
+        <section id="main">
+            <form id="form" method="POST">
+                <span class="error">* Campo Obrigatório</span><br><br>
+
+                <label>Código do Aluno</label><br>
+                <input type="text" id="codigoAluno" name="codigoAluno" required>
+                <span class="error">*</span><br><br>
+
+                <label>Nome do Aluno</label><br>
+                <input type="text" id="nomeAluno" name="nomeAluno" disabled><br><br>
+
+                <label>Evento</label><br>
+                <input type="text" id="evento" name="evento" required>
+                <span class="error">*</span><br><br>
+
+                <label>Carga Horária no Evento</label><br>
+                <input type="text" id="cargaHorariaEvento" name="cargaHorariaEvento" required>
+                <span class="error">*</span><br><br>
+
+                <label>Atividade</label><br>
+                <input type="text" id="atividade" name="atividade"><br><br>
+
+                <label>Carga Horária na Atividade</label><br>
+                <input type="text" id="cargaHorariaAtividade" name="cargaHorariaAtividade"><br><br>
+
+                <input type="submit" id="enviar" value="Enviar" class="botao">
+
+                <input type="reset" id="limpar" value="Limpar" class="botao">
+            </form>
+
+            <!-- Inclusão das validações com o Plugin jQuery Validation-->
+            <script src="validacao.js"></script>
+        </section>
+    </body>
+</html>

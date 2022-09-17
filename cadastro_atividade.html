@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+<head>
+    <title>Cadastro de Atividades</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+</head>
+    <body>
+        <header id="cabecalho">
+            <p>Cadastro de Atividades</p>
+        </header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="controle_eventos_home.html" target="_self">Home</a></li>
+                <li><a href="cadastro_pessoa.html" target="_self">Cadastro de Pessoas</a></li>
+                <li><a href="cadastro_evento.html" target="self">Cadastro de Eventos</a></li>
+                <li><a href="cadastro_atividade.html" target="self">Cadastro de Atividades</a></li>
+                <li><a href="apontamento_frequencia.html" target="self">Apontamento de Frequência</a></li>
+            </ul>
+        </nav>
+        <section id="main">
+            <form id="form" method="post">
+                <span class="error">* Campo Obrigatório</span><br><br>
+
+                <label>Atividade</label><br>
+                <input type="text" name="atividade" required>
+                <span class="error">*</span><br><br>
+
+                <label>Descrição</label><br>
+                <input type="text" name="descricao" required>
+                <span class="error">*</span><br><br>
+
+                <label>Código do Palestrante</label><br>
+                <input type="text" name="palestrante" required>
+                <span class="error">*</span><br><br>
+
+                <label>Nome do Palestrante</label><br>
+                <input type="text" name="nomePalestrante" disabled><br><br>
+
+                <label>Evento Relacionado</label><br>
+                <input type="text" name="evento" required>
+                <span class="error">*</span><br><br>
+
+                <input type="submit" value="Enviar" class="botao">
+
+                <input type="reset" value="Limpar" class="botao">
+            </form>
+
+            <!-- Inclusão das validações com o Plugin jQuery Validation-->
+            <script src="validacao.js"></script>
+        </section>
+    </body>
+</html>

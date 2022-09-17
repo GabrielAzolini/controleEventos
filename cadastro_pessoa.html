@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+<head>
+    <title>Cadastro de Pessoas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+</head>
+    <body>
+        <header id="cabecalho">
+            <p>Cadastro de Pessoas</p>
+        </header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="controle_eventos_home.html" target="_self">Home</a></li>
+                <li><a href="cadastro_pessoa.html" target="_self">Cadastro de Pessoas</a></li>
+                <li><a href="cadastro_evento.html" target="self">Cadastro de Eventos</a></li>
+                <li><a href="cadastro_atividade.html" target="self">Cadastro de Atividades</a></li>
+                <li><a href="apontamento_frequencia.html" target="self">Apontamento de Frequência</a></li>
+            </ul>
+        </nav>
+        <section id="main">
+            <form id="form" action="cadastro_pessoa.php" method="POST">
+                <span class="error">* Campo Obrigatório</span><br><br>
+
+                <label>Código</label><br>
+                <input type="text" id="codigo" name="codigo" required>
+                <span class="error">* <?php echo $codigoErr; ?></span><br><br>
+
+                <label>Nome</label><br>
+                <input type="text" id="nome" name="nome" required>
+                <span class="error">* <?php echo $nomeErr; ?></span><br><br>
+
+                <label>E-mail</label><br>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                <span class="error">* <?php echo $emailErr; ?></span><br><br>
+
+                <label>CPF</label><br>
+                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})$" required>
+                <span class="error">* <?php echo $cpfErr; ?></span><br><br>
+
+                <label>Data de Nascimento</label><br>
+                <input type="date" id="dataNasc" name="dataNasc" required>
+                <span class="error">* <?php echo $dataNascErr; ?></span><br><br>
+
+                <input type="submit" id="enviar" value="Enviar" class="botao">
+
+                <input type="reset" id="limpar" value="Limpar" class="botao">
+            </form>
+
+            <!-- Inclusão das validações com o Plugin jQuery Validation-->
+            <script src="validacao.js"></script>
+        </section>
+    </body>
+</html>
